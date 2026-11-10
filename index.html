@@ -233,17 +233,36 @@
         rel="noopener noreferrer">Seguir @bedda_madre_bcn ↗</a>
     </section>
   </main>
-  <footer class="footer"><span>Bedda Madre · Castelldefels</span><a href="tel:+34610996515">Reservas 610 996
-      515</a><span>Hecha por <a href="https://michael-studioweb.michaelromero.chatgpt.site" target="_blank"
-        rel="noopener noreferrer">Michael Studio Web</a></span><span>© 2026</span></footer>
-  <aside class="review-card" id="review-card" role="dialog" aria-labelledby="review-title">
-    <button type="button" class="review-close" id="close-review" aria-label="Cerrar invitación a reseñar">×</button>
-    <p class="label">¿Ya estuviste en Bedda Madre?</p>
-    <h2 id="review-title">Cuéntalo en Google.</h2>
-    <p>¿Hubo un plato que te conquistó? Cuéntanos cómo fue tu visita. Tu opinión nos ayuda a mejorar y anima a otros a
-      descubrir nuestra mesa.</p>
-    <a href="https://search.google.com/local/writereview?placeid=ChIJF66OZgCDpBIR7WjaZqlqGWE" target="_blank"
-      rel="noopener noreferrer" id="review-link">Escribir mi reseña ↗</a>
+  <footer class="footer">
+    <div class="footer-main">
+      <span>Bedda Madre · Castelldefels</span>
+      <a href="tel:+34610996515">Reservas 610 996 515</a>
+      <span>Diseño y desarrollo por <a href="https://michael-studioweb.michaelromero.chatgpt.site" target="_blank"
+          rel="noopener noreferrer">Michael Studio Web</a></span>
+      <span>© 2026</span>
+    </div>
+    <p class="footer-disclaimer">Proyecto conceptual no oficial. Bedda Madre y sus elementos de identidad pertenecen a
+      sus respectivos titulares.</p>
+    <nav class="footer-legal" aria-label="Información legal">
+      <a href="aviso-legal.html">Aviso legal</a>
+      <a href="privacidad.html">Privacidad</a>
+      <a href="cookies.html">Cookies</a>
+      <button type="button" id="open-cookie-settings">Configurar cookies</button>
+    </nav>
+  </footer>
+  <aside class="cookie-banner" id="cookie-banner" aria-labelledby="cookie-title" aria-describedby="cookie-description"
+    role="dialog" aria-live="polite" hidden>
+    <div>
+      <p class="label">Tus preferencias</p>
+      <h2 id="cookie-title">Analítica solo si tú quieres.</h2>
+      <p id="cookie-description">Usamos almacenamiento local para recordar tu elección. Google Analytics solo se
+        activará si aceptas y cuando el proyecto tenga configurado un identificador válido. Puedes cambiar tu decisión
+        desde el footer. <a href="cookies.html">Más información</a>.</p>
+    </div>
+    <div class="cookie-actions">
+      <button type="button" class="button cookie-reject" id="reject-cookies">Rechazar analítica</button>
+      <button type="button" class="reserve cookie-accept" id="accept-cookies">Aceptar analítica</button>
+    </div>
   </aside>
   <script>
     const menuTabs = [...document.querySelectorAll('.menu-tabs [role="tab"]')];
@@ -266,11 +285,8 @@
       });
     }
     activateTab(menuTabs[0]);
-    const reviewCard = document.getElementById('review-card');
-    document.getElementById('close-review').addEventListener('click', () => {
-      reviewCard.hidden = true;
-    });
   </script>
+  <script src="analytics-consent.js" defer></script>
 </body>
 
 </html>

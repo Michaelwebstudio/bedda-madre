@@ -1,0 +1,81 @@
+:root {
+  --ink: #202020;
+  --cream: #f7f1e7;
+  --paper: #fffdf9;
+  --tomato: #e64b2f;
+  --sun: #f1b818;
+  --line: rgba(32, 32, 32, .17);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.65;
+}
+a { color: inherit; text-underline-offset: 3px; }
+.legal-header {
+  min-height: 76px;
+  padding: 1rem 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+.brand {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  font-size: 1.35rem;
+  text-decoration: none;
+}
+.back {
+  font-size: .78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+.legal-main {
+  width: min(860px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: clamp(3rem, 8vw, 7rem) 0;
+}
+.kicker {
+  color: var(--tomato);
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+h1, h2 { font-family: Georgia, "Times New Roman", serif; line-height: 1.05; }
+h1 { font-size: clamp(2.8rem, 8vw, 5.5rem); letter-spacing: -.055em; margin: .7rem 0 2rem; }
+h2 { font-size: clamp(1.5rem, 3vw, 2.15rem); margin: 2.6rem 0 .8rem; }
+p, li { font-size: 1rem; }
+.notice {
+  margin: 2rem 0;
+  padding: 1.2rem 1.35rem;
+  background: var(--paper);
+  border-left: 5px solid var(--sun);
+}
+.legal-table { width: 100%; border-collapse: collapse; margin: 1.2rem 0 2rem; }
+.legal-table th, .legal-table td { padding: .8rem; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+.legal-table th { background: var(--paper); }
+.legal-footer {
+  padding: 1.4rem 5vw;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: .76rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+@media (max-width: 600px) {
+  .legal-header { align-items: flex-start; flex-direction: column; }
+  .legal-table, .legal-table tbody, .legal-table tr, .legal-table th, .legal-table td { display: block; }
+  .legal-table tr { margin-bottom: 1rem; }
+}
