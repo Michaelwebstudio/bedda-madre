@@ -71,7 +71,7 @@
 
   function openBanner() {
     banner.hidden = false;
-    rejectButton.focus();
+    rejectButton.focus({ preventScroll: true });
   }
 
   acceptButton.addEventListener("click", () => {

@@ -1319,6 +1319,8 @@ main section > * {
   right: 22px;
   bottom: 22px;
   width: min(350px, calc(100% - 2rem));
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
   margin: 0;
   padding: 1rem;
   display: grid;
@@ -1362,5 +1364,6 @@ main section > * {
     align-items: stretch;
     right: 16px;
     bottom: 16px;
+    max-height: calc(100vh - 2rem);
   }
 }
